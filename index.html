@@ -266,47 +266,70 @@ button{cursor:pointer}
 }
 
 /* ===== QUESTION NUMBERS ===== */
-.question-board{
-  border:2px solid var(--blue);
-  border-radius:16px;
-  background:#fff;
-  padding:7px 12px 9px;
-  display:grid;
-  grid-template-rows:auto 1fr;
-  overflow:hidden;
+.question-board {
+  border: 2px solid var(--blue);
+  border-radius: 16px;
+  background: #fff;
+  padding: 7px 12px 9px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto; 
 }
-.question-board h2{
-  margin:0 0 5px;text-align:center;color:var(--blue-dark);
-  font-size:17px;font-weight:900;letter-spacing:.5px;
+.question-board h2 {
+  margin: 0 0 5px;
+  text-align: center;
+  color: var(--blue-dark);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .5px;
 }
-.number-grid{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  align-content:center;
+.number-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-content: center;
 }
-.number-btn{
-  width:44px;height:44px;flex:0 0 44px;
-  border:2px solid #b8c7d5;border-radius:10px;background:#fff;
-  color:var(--blue-dark);font-size:20px;font-weight:900;
-  box-shadow:0 2px 5px rgba(15,93,157,.08);
-  transition:.15s ease;
+.number-btn {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 2px solid #b8c7d5;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--blue-dark);
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 2px 5px rgba(15,93,157,.08);
+  transition: .15s ease;
 }
-.number-btn:hover{
-  border-color:var(--blue);
-  transform:translateY(-2px);
+.number-btn:hover {
+  border-color: var(--blue);
+  transform: translateY(-2px);
 }
-.number-btn.done{
-  background:var(--green-soft);
-  border-color:#58ba88;color:#087445;
+.number-btn.done {
+  background: var(--green-soft);
+  border-color: #58ba88;
+  color: #087445;
 }
-.number-btn.active{
-  outline:3px solid rgba(255,201,0,.43);
-  outline-offset:2px;
+.number-btn.active {
+  outline: 3px solid rgba(255,201,0,.43);
+  outline-offset: 2px;
 }
 
+@media screen and (max-width: 600px) {
+  .number-grid {
+    gap: 5px;
+  }
+  .number-btn {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+}
 /* ===== BIG LETTER AREA ===== */
 .letters-section{
   min-height:0;border:2px solid var(--blue);border-radius:17px;
